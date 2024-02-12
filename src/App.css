@@ -1,0 +1,62 @@
+.line{
+  height: 2px;
+  width: 450px;
+  border-width: 5px;
+  background-color: black;
+  
+}
+
+.textbox{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #a0a4af; 
+  width: 450px;
+  height: 40px;
+  border: none;
+}
+.footer{
+  background-color: rgba(0, 0, 0, 0.774);
+  height: 80px;
+  color: white;
+}
+
+.registertextbox{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #a0a4af; 
+  width: 250px;
+  height: 40px;
+  border: none;
+}
+.agetextbox{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #a0a4af; 
+  width: 155px;
+  height: 40px;
+  border: none;
+}
+.nametextbox{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #a0a4af; 
+  width: 350px;
+  height: 40px;
+  border: none;
+}
+
+/* about */
+
+.about{
+  background-image: url(file:///C:/Users/HP/Desktop/Agri%20shop/agrishop1/src/AgriShop2/Image/sky3.jpg);
+  background-size: cover;
+}
+.heading{
+  margin-bottom: 200px;
+ 
+  text-align: center;
+}
+.heading p{
+  text-align: left;
+  margin-left: 311px;
+}
