@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function Footer() {
   return (
     <div>
-        <footer class="bg-body-tertiary text-center text-lg-start fixed-bottom">
+        <footer class="bg-body-tertiary text-center text-lg-start ">
   
   <div class="text-start-center p-5" className='footer' >
     Home-About <br/>

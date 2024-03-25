@@ -1,7 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
+import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-function Register() {
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+function FarmerRegister() {
+    const[data,setdata]=useState({name:'',age:'',city:'',pincode:'',district:'',contact:'', email:'',password:''})
+    const func=(a)=>{
+        setdata({...data,[a.target.name]:a.target.value})
+        console.log(a)
+    }
+    const onsubmit=(Event)=>{
+        Event.preventDefault()
+        // axios.post("https://jsonplaceholder.typicode.com/posts",data)
+        // .then((result)=>{
+        //     console.log(result)
+        // })
+        // .catch((error)=>{
+        //     console.log(error)
+        // })
+        console.log("save")
+    }
+
+    console.log(data)
   return (
     <div>
         <section class="vh-100">
@@ -13,15 +35,15 @@ function Register() {
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1"  >
       
-      <h3>Customer Registration Form</h3><br/>
-        <form>
+      <h3>Farmer Registration Form</h3><br/>
+        <form onSubmit={onsubmit}>
          
         <div class="row">
                 <div class="col-md-8 mb-4">
 
                   <div class="form-outline">
                   <label class="form-label" for="Name"> Name</label><br/>
-                    <input type="text" id="Name" class="form-control form-control-lg"  className='nametextbox'/>
+                    <input type="text" id="Name" class="form-control form-control-lg"  className='nametextbox' onChange={func} name="name" value={data.name}/>
                     
                   </div>
 
@@ -30,7 +52,7 @@ function Register() {
 
                   <div class="form-outline">
                   <label class="form-label" for="Age">Age</label><br/>
-                    <input type="text" id="age" class="form-control form-control-lg" className='agetextbox'/>
+                    <input type="text" id="age" class="form-control form-control-lg" className='agetextbox' onChange={func} name="age" value={data.age}/>
                     
                   </div>
 
@@ -42,7 +64,7 @@ function Register() {
 
                   <div class="form-outline ">
                   <label for="city" class="form-label">City</label><br/>
-                    <input type="text" class="form-control form-control-lg" id="city" className='registertextbox' />
+                    <input type="text" class="form-control form-control-lg" id="city" className='registertextbox' onChange={func} name="city" value={data.city}/>
                     
                   </div>
 
@@ -50,7 +72,7 @@ function Register() {
                 <div class="col-md-6 mb-4">
                   <div class="form-outline ">
                   <label for="pincode" class="form-label">Pincode</label><br/>
-                    <input type="text" class="form-control form-control-lg" id="pincode" className='registertextbox'/>
+                    <input type="text" class="form-control form-control-lg" id="pincode" className='registertextbox' onChange={func} name="pincode" value={data.pincode}/>
                     
                   </div>
 
@@ -62,7 +84,7 @@ function Register() {
 
                   <div class="form-outline ">
                   <label for="district" class="form-label">District</label><br/>
-                    <input type="text" class="form-control form-control-lg" id="district" className='registertextbox'/>
+                    <input type="text" class="form-control form-control-lg" id="district" className='registertextbox' onChange={func} name="district" value={data.district}/>
                     
                   </div>
 
@@ -70,7 +92,7 @@ function Register() {
                 <div class="col-md-6 mb-4">
                   <div class="form-outline ">
                   <label for="contact" class="form-label">Contact</label><br/>
-                    <input type="tel" class="form-control form-control-lg" id="contact" className='registertextbox' />
+                    <input type="tel" class="form-control form-control-lg" id="contact" className='registertextbox' onChange={func} name="contact" value={data.contact}/>
                     
                   </div>
 
@@ -82,7 +104,7 @@ function Register() {
 
                   <div class="form-outline">
                   <label class="form-label" for="emailAddress">Email</label><br/>
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" className='registertextbox' />
+                    <input type="email" id="emailAddress" class="form-control form-control-lg" className='registertextbox' onChange={func} name="email" value={data.email}/>
                     
                   </div>
 
@@ -91,7 +113,7 @@ function Register() {
 
                   <div class="form-outline">
                   <label class="form-label" for="password">Password</label><br/>
-                    <input type="password" id="password" class="form-control form-control-lg" className='registertextbox'/>
+                    <input type="password" id="password" class="form-control form-control-lg" className='registertextbox' onChange={func} name="password" value={data.password}/>
                     
                   </div>
 
@@ -113,8 +135,10 @@ function Register() {
     </div>
   </div>
 </section>
+<Navbar/>
+<Footer/>
     </div>
   )
 }
 
-export default Register
+export default FarmerRegister

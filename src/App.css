@@ -1,3 +1,6 @@
+
+/* Login */
+
 .line{
   height: 2px;
   width: 450px;
@@ -14,11 +17,24 @@
   height: 40px;
   border: none;
 }
+.logingrid{
+  border: 1px solid #CCC;
+  border-radius: 10px;
+  height: 500px;
+  width: 500px;
+  box-shadow: 7px 7px 13px 1px #CCC,
+              -10px -9px 11px 1px #CCC;
+}
+
+/* footer */
+
 .footer{
   background-color: rgba(0, 0, 0, 0.774);
   height: 80px;
   color: white;
 }
+
+/* Register */
 
 .registertextbox{
   border-top-right-radius: 5px;
@@ -45,18 +61,130 @@
   border: none;
 }
 
-/* about */
+
+/* Home */
+
+.home{
+  background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)),url(file:///C:/Users/HP/Desktop/Agri%20shop/agrishop1/src/AgriShop2/Image/basket.jpeg);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+}
+.home h1{
+  font-size: 90px;
+  color: white;
+  letter-spacing: 3px;
+  font-family: cursive;
+  text-shadow: 0px 1px 0px #CCC,
+               0px 2px 0px #CCC,
+               0px 3px 0px #CCC,
+               0px 4px 0px #CCC;
+  }
+.home p{
+     text-align: center;
+     color: white;
+     font-family: cursive;
+}
+.btn {
+  color: white !important;
+  border-color: #fccb90; 
+}
+.vegetable{
+  text-align: center;
+  border: 1px solid #DBDBDB;
+  padding: 45px;
+  border-radius: 10px;
+}
+section{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutcolor{
+  background-color: rgba(0, 0, 0, 0.907);
+  color: white;
+  
+}
+.aboutcolor h2{
+  margin-top: 80px;
+}
+.left{
+  margin-left: 150px;
+}
+#aaa {
+  padding-left: 150px;
+}
+.grapesimg{
+  width: 350px; 
+  height: 216px; 
+  position: absolute;
+  top: 17px;
+  right: 69px;
+  z-index: 10;
+}
+.whiteimg{
+  width: 350px; 
+  height: 250px; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  bottom: -10px;
+  right: -10px;
+}
+#parent{
+  position: relative;
+  width: 400px; 
+  height: 300px;
+  padding-top: 100px;
+}
+
+
+/* AboutUs */
 
 .about{
-  background-image: url(file:///C:/Users/HP/Desktop/Agri%20shop/agrishop1/src/AgriShop2/Image/sky3.jpg);
+  background-image: url(file:///C:/Users/HP/Desktop/AgriShop%20Major/Agrishop-Frontend/agrishop/src/component/Image/sky6.jpg);
   background-size: cover;
+  color: white;
 }
-.heading{
-  margin-bottom: 200px;
- 
-  text-align: center;
+.about h3{
+  margin-top: 80px;
 }
-.heading p{
-  text-align: left;
-  margin-left: 311px;
+.left{
+  margin-left: 150px;
+}
+#aaa {
+  padding-left: 150px;
+}
+.bannerimg{
+  width: 350px; 
+  height: 216px; 
+  position: absolute;
+  top: 17px;
+  right: 69px;
+  z-index: 10;
+}
+.whiteimg{
+  width: 350px; 
+  height: 250px; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  bottom: -10px;
+  right: -10px;
+}
+#parent{
+  position: relative;
+  width: 400px; 
+  height: 300px;
+  
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
 }

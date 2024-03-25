@@ -1,10 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-function Login() {
+import Navbar from './Navbar';
+import Footer from './Footer';
+function CustomerLogin() {
+    const[data,setdata]=useState({email:'',password:''})
+    const func=(a)=>{
+        setdata({...data,[a.target.name]:a.target.value})
+        console.log(a)
+    }
+    const onsubmit=(Event)=>{
+      Event.preventDefault()
+      // axios.post("https://jsonplaceholder.typicode.com/posts",data)
+      // .then((result)=>{
+      //     console.log(result)
+      // })
+      // .catch((error)=>{
+      //     console.log(error)
+      // })
+      console.log("save")
+  }
+    console.log(data)
   return (
     <div>
-        <section class="vh-100">
+       <section class="vh-100">
   <div class="container py-5 h-100" >
     <div class="row d-flex align-items-center justify-content-center h-100" >
       <div class="col-md-8 col-lg-7 col-xl-6" >
@@ -14,18 +33,18 @@ function Login() {
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1"  >
       
       <h3>Customer Login Form</h3><br/>
-        <form>
+        <form onSubmit={onsubmit}>
          
           <div class="form-outline mb-4">
           <label class="form-label" for="form1Example13">Email </label><br/>
-            <input type="email" id="form1Example13" class="form-control form-control-lg" className='textbox'/>
+            <input type="email" id="form1Example13" class="form-control form-control-lg" className='textbox' onChange={func} name="email" value={data.email}/>
             
           </div>
 
           
           <div class="form-outline mb-4">
           <label class="form-label" for="form1Example23">Password</label><br/>
-            <input type="password" id="form1Example23" class="form-control form-control-lg" className='textbox'/>
+            <input type="password" id="form1Example23" class="form-control form-control-lg" className='textbox' onChange={func} name="password" value={data.password}/>
             
           </div>
 
@@ -40,8 +59,8 @@ function Login() {
           <a href="#!" class="nav-link" style={{color:'blue'}}>Forgot password?</a>
           <hr class="my-4" className='line'/>
 
-          <p class="nav-link" style={{color:'blue'}}>Don't have an account? <a href="./register" class="fw-bold text-body" >Sign up</a></p>
-
+          <div class="text-left "><p style={{color:'blue'}}>Don't  have an account?<a href="./register" class="font-italic text-muted" > 
+                                        <u style={{color:'blue'}}>Sign up</u></a></p></div>
 
           
 
@@ -51,8 +70,10 @@ function Login() {
     </div>
   </div>
 </section>
+<Navbar/>
+<Footer/> 
     </div>
   )
 }
 
-export default Login
+export default CustomerLogin

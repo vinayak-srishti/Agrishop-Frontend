@@ -13,19 +13,31 @@ function Navbar() {
     </a>
     <ul class="nav justify-content-end" >
         <li class="nav-item">
-          <a class="nav-link" href="#" style={{color:'gray'}}>Home</a>
+          <a class="nav-link" href="./Home" style={{color:'gray'}}>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" style={{color:'gray'}}>About</a>
+          <a class="nav-link" href="./AboutUs" style={{color:'gray'}}>About</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color:'gray'}}>
             Login
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./Login">Login</a></li>
-            <li><a class="dropdown-item" href="./Register">Register</a></li>
+            <li><a class="dropdown-item" href="./Login">Admin</a></li>
+            <li><a class="dropdown-item" href="./FarmerLogin">Farmer</a></li>
+            <li><a class="dropdown-item" href="./CustomerLogin">Customer</a></li>
+            <li><a class="dropdown-item" href="./KrishibhavanLogin">Krishibhavan</a></li>
            
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color:'gray'}}>
+            Register
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./FarmerRegister">Farmer</a></li>
+            <li><a class="dropdown-item" href="./CustomerRegister">Customer</a></li>
+            <li><a class="dropdown-item" href="./KrishibhavanRegister">Krishibhavan</a></li>
           </ul>
         </li>
     </ul>
